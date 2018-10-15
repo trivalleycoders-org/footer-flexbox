@@ -1,6 +1,5 @@
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles'
-import Grid from '@material-ui/core/Grid'
 import RightSide from './RightSide'
 import ByTvc from './ByTvc'
 
@@ -23,42 +22,57 @@ const Footer = ({ classes }) => {
 const styles = theme => ({
 
   footer: {
-    // minHeight: 480,
     // backgroundColor: 'rgba(255, 150, 255, 0.4)',
     backgroundColor: 'rgb(22, 22, 22)',
-    height: 512,
     display: 'flex',
     flexFlow: 'column nowrap',
 
     [theme.breakpoints.up('md')]: {
       // backgroundColor: 'rgba(255, 150, 255, 1)',
+      height: 350,
       flexFlow: 'row nowrap',
     },
   },
   left: {
     // backgroundColor: 'orange',
-    height: '100%',
-    // flexFlow: 'row nowrap',
+
+
     [theme.breakpoints.up('md')]: {
+      height: '100%',
       flexBasis: '33.33333333%',
     },
   },
   right: {
     // backgroundColor: 'yellow',
-    height: '100%',
+
+
     [theme.breakpoints.up('md')]: {
+      // width: 300,
+      height: '100%',
       flexBasis: '66.66666666%',
     },
   },
   dividerContainer: {
-    paddingTop: theme.spacing.unit,
-    paddingBottom: theme.spacing.unit,
     // backgroundColor: 'grey',
+    paddingRight: theme.spacing.unit * 2,
+    paddingLeft: theme.spacing.unit *2,
+    //
+    [theme.breakpoints.up('md')]: {
+      paddingRight: 0,
+      paddingLeft: 0,
+      paddingTop: theme.spacing.unit * 2,
+      paddingBottom: theme.spacing.unit * 2,
+    },
   },
   divider: {
     backgroundColor: 'grey',
-    width: 1,
-    height: '100%',
+    height: 1,
+    // width: '100%',
+
+    [theme.breakpoints.up('md')]: {
+      height: '100%',
+      width: 1
+    },
   },
 })
 

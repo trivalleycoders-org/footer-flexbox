@@ -6,7 +6,7 @@ import Body1 from 'ui/ui-elements/typography/Body1'
 import ResponsiveImage from 'ui/ui-elements/ResponsiveImage'
 import iTVC from './media/tvc-wordmark-2.svg'
 
-const Mern = ({ classes }) => {
+const ByTvc = ({ classes }) => {
   return (
     <div id='ByTvc' className={classes.container}>
       <Paper className={classes.item} square elevation={0}>
@@ -20,11 +20,20 @@ const Mern = ({ classes }) => {
 const styles = theme => ({
   container: {
     // backgroundColor: 'rgb(25, 25, 25)',
-    height: '100%',
+
     display: 'flex',
     flexFlow: 'column nowrap',
-    alignContent: 'stretch',
-    justifyContent: 'center',
+
+
+    paddingTop: theme.spacing.unit * 3,
+    paddingBottom: theme.spacing.unit * 3,
+    [theme.breakpoints.up('md')]: {
+      justifyContent: 'center',
+      alignContent: 'stretch',
+      height: '100%',
+      paddingTop: 0,
+      paddingBottom: 0,
+    },
 
   },
   item: {
@@ -37,4 +46,4 @@ const styles = theme => ({
   }
 })
 
-export default withStyles(styles)(Mern)
+export default withStyles(styles)(ByTvc)

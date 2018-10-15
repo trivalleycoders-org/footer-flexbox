@@ -5,7 +5,7 @@ import Mern from './Mern'
 
 const RightSide = ({ classes }) => {
   return (
-    <div className={classes.rightSide}>
+    <div id='RightSide' className={classes.container}>
       <div className={classes.rightTop}>
         <Mern />
       </div>
@@ -21,23 +21,35 @@ const RightSide = ({ classes }) => {
 }
 
 const styles = theme => ({
-  rightTop: {
-    // backgroundColor: 'red',
-    flexBasis: '50%',
-  },
-  rightBottom: {
-    // backgroundColor: 'orange',
-    flexBasis: '50%',
-  },
-  rightSide: {
+  container: {
     // backgroundColor: 'grey',
     display: 'flex',
     flexFlow: 'column',
-    height: '100%',
+    [theme.breakpoints.up('md')]: {
+      height: '100%',
+    },
+  },
+  rightTop: {
+    // backgroundColor: 'red',
+    paddingTop: theme.spacing.unit * 3,
+    paddingBottom: theme.spacing.unit * 3,
+
+    [theme.breakpoints.up('md')]: {
+      // paddingBottom: theme.spacing.unit * 2,
+      flexBasis: '50%',
+      paddingTop: theme.spacing.unit * 3,
+      paddingBottom: theme.spacing.unit * 3,
+    },
+  },
+  rightBottom: {
+    // backgroundColor: 'orange',
+    [theme.breakpoints.up('md')]: {
+      flexBasis: '50%',
+    },
   },
   dividerContainer: {
-    paddingLeft: theme.spacing.unit,
-    paddingRight: theme.spacing.unit,
+    paddingLeft: theme.spacing.unit * 2,
+    paddingRight: theme.spacing.unit * 2,
   },
   divider: {
     backgroundColor: 'grey',

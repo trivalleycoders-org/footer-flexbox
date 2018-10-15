@@ -78,34 +78,44 @@ const Mern = ({ classes }) => {
 
 const styles = theme => ({
   item: {
-    // backgroundColor: 'red',
     textAlign: 'center',
   },
   container: {
-    // backgroundColor: 'green',
-    height: '100%',
-    // backgroundColor: 'rgb(25, 25, 25)'
+    display: 'flex',
+    flexFlow: 'column nowrap',
+    // justifyContent: 'center',
+    // alignItems: 'center',
+
+
+    [theme.breakpoints.up('md')]: {
+      width: '100%',
+      height: '100%',
+    },
   },
   row1: {
-    // backgroundColor: 'rgb(50, 50, 50)',
     height: '33.333333333333%',
   },
   row2: {
-    // backgroundColor: 'rgb(75, 75, 75)',
     height: '66.666666666666%',
   },
   titlePaper: {
-    // backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    display: 'flex',
     backgroundColor: 'transparent',
-    padding: theme.spacing.unit * 2,
-    height: '100%',
+    justifyContent: 'center',
+    marginBottom: theme.spacing.unit * 2,
+
+    [theme.breakpoints.up('md')]: {
+      // alignItems: 'flex-start',
+      height: '100%',
+      // alignItems: 'flex-end',
+      alignItems: 'center',
+    },
   },
   paper: {
-    // backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    backgroundColor: 'transparent',
     display: 'flex',
     alignItems: 'center',
-    backgroundColor: 'transparent',
-    padding: theme.spacing.unit * 2,
+    // padding: theme.spacing.unit * 2,
     height: '100%',
   },
   logoPaper: {

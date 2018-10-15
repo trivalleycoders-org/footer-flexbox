@@ -3,7 +3,7 @@ import { compose } from 'recompose'
 import { withStyles } from '@material-ui/core/styles'
 
 // User
-// import Breakpoints from 'ui/ui-elements/Breakpoints'
+import Breakpoints from 'ui/ui-elements/Breakpoints'
 import withRoot from 'ui/withRoot'
 import Footer from 'ui/Footer'
 
@@ -11,6 +11,7 @@ const App = ({ classes }) => {
 
     return (
       <div className={classes.wrapper}>
+        <Breakpoints />
         <Footer />
       </div>
     )

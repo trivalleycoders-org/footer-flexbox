@@ -14,6 +14,7 @@ const Us = ({ classes }) => {
   return (
     <Grid
       container
+      id='Us'
       // spacing={16}
       className={classes.container}
       alignItems='stretch'
@@ -60,7 +61,7 @@ const Us = ({ classes }) => {
           square
           elevation={0}
         >
-            <Body1 align='center' color='white'  className={classes.body1}>
+            <Body1 align='center' color='white'  className={classes.body1ContactUs}>
               Contact Us
             </Body1>
             <Body1 align='center' color='white' className={classes.info}>
@@ -76,7 +77,16 @@ const Us = ({ classes }) => {
 const styles = theme => ({
   container: {
     // backgroundColor: 'rgb(50, 250, 50)',
+    display: 'flex',
     height: '100%',
+    // maxWidth: 400,
+    // justifyContent: 'center',
+    paddingTop: theme.spacing.unit * 3,
+    paddingBottom: theme.spacing.unit * 3,
+    [theme.breakpoints.up('md')]: {
+      paddingTop: 0,
+      paddingBottom: 0,
+    },
   },
   itemPaper: {
     backgroundColor: 'transparent',
@@ -99,6 +109,10 @@ const styles = theme => ({
   },
   body1: {
     marginBottom: 30
+  },
+  body1ContactUs: {
+    marginTop: theme.spacing.unit,
+    marginBottom: 0
   },
   info: {
     display: 'flex',
